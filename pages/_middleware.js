@@ -23,6 +23,9 @@ export async function middleware(req) {
   //   2) Its a request for next-auth session & provider fetching
   //   Redirect them to login if they dont have token AND are requesting a protected route
   if (!token && pathname !== "/login") {
-    return NextResponse.redirect("/login");
+    // return NextResponse.redirect("/login");
+    const url = request.nextUrl.clone()
+    url.pathname = '/login'
+    return NextResponse.rewrite(url)
   }
 }

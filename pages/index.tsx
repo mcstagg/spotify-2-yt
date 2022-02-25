@@ -1,10 +1,14 @@
+import { getSession, GetSessionParams, useSession } from "next-auth/react";
 import Head from 'next/head';
-import Sidebar from "../components/Sidebar";
 import Center from "../components/Center";
-import Player from '../components/Player';
-import { getSession, useSession } from 'next-auth/react';
+import Player from "../components/Player";
+import Sidebar from "../components/Sidebar";
 
 export default function Home() {
+  const { data: session, status } = useSession();
+
+  console.log("CLIENT SESSION IS >>> ", session);
+
   return (
     <div className="bg-black h-screen overflow-hidden">
       <Head>
@@ -12,7 +16,7 @@ export default function Home() {
         {/* <link rel="icon" href="/favicon.ico" /> */}
       </Head>
 
-      <main className="flex">
+      <main className="overflow-hidden scrollbar-hide flex">
         <Sidebar />
         <Center />
       </main>
@@ -21,14 +25,12 @@ export default function Home() {
         <Player />
       </div>
     </div>
-  )
+  );
 }
 
-export async function getServerSideProps(context) {
+export async function getServerSideProps(context: GetSessionParams | undefined) {
   const session = await getSession(context);
   return {
-    props: {
-      session
-    }
+    props: { session },
   };
 }

@@ -7,7 +7,7 @@ export async function middleware(req) {
     req, 
     secret: process.env.JWT_SECRET,
     secureCookie:
-      process.env.NEXTAUTH_URL?.startsWith("https://") 
+      process.env.NEXTAUTH_URL.startsWith("https://") 
   });
   // const token = await getToken({ req, secret: process.env.JWT_SECRET });
   const { pathname } = req.nextUrl;
@@ -21,10 +21,10 @@ export async function middleware(req) {
 
   //   2) Its a request for next-auth session & provider fetching
   //   Redirect them to login if they dont have token AND are requesting a protected route
-  if (!token && pathname !== "/login") {
-    return NextResponse.redirect("/login");
-    // const url = request.nextUrl.clone()
-    // url.pathname = '/login'
-    // return NextResponse.rewrite(url)
-  }
+  // if (!token && pathname !== "/login") {
+  //   return NextResponse.redirect("/login");
+  //   // const url = request.nextUrl.clone()
+  //   // url.pathname = '/login'
+  //   // return NextResponse.rewrite(url)
+  // }
 }

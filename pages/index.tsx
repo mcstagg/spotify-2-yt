@@ -13,7 +13,8 @@ export default function Home() {
     <div className="bg-black h-screen overflow-hidden">
       <Head>
         <title>Spotify 2.0</title>
-        {/* <link rel="icon" href="/favicon.ico" /> */}
+        <link rel="icon" href="/favicon.ico" />
+        <meta property="og:image" content="spotify.jpg" />
       </Head>
 
       <main className="overflow-hidden scrollbar-hide flex">

@@ -7,7 +7,8 @@ export async function middleware(req) {
     req, 
     secret: process.env.JWT_SECRET,
     secureCookie:
-      process.env.NEXTAUTH_URL.startsWith("https://") 
+        process.env.NEXTAUTH_URL?.startsWith("https://") ??
+    !!process.env.VERCEL_URL
   });
   // const token = await getToken({ req, secret: process.env.JWT_SECRET });
   const { pathname } = req.nextUrl;
@@ -17,8 +18,6 @@ export async function middleware(req) {
   // 1) A token exists
   if (pathname.includes("/api/auth") || token) {
     return NextResponse.next();
-  } else {
-    console.log("A Token Does Not Exist!")
   }
 
   //   2) Its a request for next-auth session & provider fetching

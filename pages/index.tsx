@@ -14,7 +14,7 @@ export default function Home() {
       <Head>
         <title>Spotify 2.0</title>
         <link rel="icon" href="/favicon.ico" />
-        <meta property="og:image" content="SpotifyClone.png"/>
+        <meta property="og:image" content="https://neilpatel.com/wp-content/uploads/2014/03/head-html.png"/>
       </Head>
 
       <main className="overflow-hidden scrollbar-hide flex">

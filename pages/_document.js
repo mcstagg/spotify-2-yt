@@ -4,7 +4,7 @@ export default function Document() {
   return (
     <Html lang="en" prefix="og: http://ogp.me/ns#">
       <Head>
-        <meta name="image" property="og:image" content="%PUBLIC_URL%/spotify.png"/>
+        <meta name="image" property="og:image" content="/public/spotify.png"/>
         <meta property="og:title" content="Spotify Lookin' Fly"/>
         <meta name="author" content="Mike Stagg" />
         <meta property="og:description" content="This is a Spotify Clone"/>

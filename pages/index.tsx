@@ -12,6 +12,7 @@ export default function Home() {
 
   return (
     <div className="bg-black h-screen overflow-hidden">
+      <html lang="en" prefix="og: http://ogp.me/ns#">
       <Head>
         <title>Spotify 2.0</title>
         <link rel="icon" href="/favicon.ico" />
@@ -26,6 +27,7 @@ export default function Home() {
       <div className="sticky bottom-0">
         <Player />
       </div>
+      </html>
     </div>
   );
 }

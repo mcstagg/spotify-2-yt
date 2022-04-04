@@ -1,5 +1,4 @@
 import { getSession, GetSessionParams, useSession } from "next-auth/react";
-import Html from 'next/document';
 import Head from 'next/head';
 import Center from "../components/Center";
 import Player from "../components/Player";
@@ -17,7 +16,7 @@ export default function Home() {
         <title>Spotify 2.0</title>
         <link rel="icon" href="/favicon.ico" />
         <meta name="image" property="og:image" content="%PUBLIC_URL%/spotify.jpg"/>
-        <meta property="og:title" content="Spofify Lookin' Fly"/>
+        <meta property="og:title" content="Spotify Lookin' Fly"/>
         <meta name="author" content="Mike Stagg" />
         <meta property="og:description" content="This is a Spotify Clone"/>
         <meta property="og:url" content="https://spotify-2-reproduction.vercel.app"/>

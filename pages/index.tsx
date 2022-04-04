@@ -1,4 +1,5 @@
 import { getSession, GetSessionParams, useSession } from "next-auth/react";
+import Html from 'next/document';
 import Head from 'next/head';
 import Center from "../components/Center";
 import Player from "../components/Player";
@@ -14,7 +15,7 @@ export default function Home() {
       <Head>
         <title>Spotify 2.0</title>
         <link rel="icon" href="/favicon.ico" />
-        <meta property="og:image" content="https://neilpatel.com/wp-content/uploads/2014/03/head-html.png"/>
+        <meta name="image" property="og:image" content="%PUBLIC_URL%/spotify.jpg"/>
       </Head>
 
       <main className="overflow-hidden scrollbar-hide flex">

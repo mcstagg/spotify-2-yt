@@ -17,6 +17,10 @@ export default function Home() {
         <title>Spotify 2.0</title>
         <link rel="icon" href="/favicon.ico" />
         <meta name="image" property="og:image" content="%PUBLIC_URL%/spotify.jpg"/>
+        <meta property="og:title" content="Spofify Lookin' Fly"/>
+        <meta name="author" content="Mike Stagg" />
+        <meta property="og:description" content="This is a Spotify Clone"/>
+        <meta property="og:url" content="https://spotify-2-reproduction.vercel.app"/>
       </Head>
 
       <main className="overflow-hidden scrollbar-hide flex">

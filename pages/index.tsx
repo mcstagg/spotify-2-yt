@@ -16,7 +16,7 @@ export default function Home() {
       <Head>
         <title>Spotify 2.0</title>
         <link rel="icon" href="/favicon.ico" />
-        <meta name="image" property="og:image" content=".//spotify.jpg"/>
+        <meta name="image" property="og:image" content="./spotify.jpg"/>
       </Head>
 
       <main className="overflow-hidden scrollbar-hide flex">

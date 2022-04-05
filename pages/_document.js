@@ -1,11 +1,9 @@
 import { Html, Head, Main, NextScript } from 'next/document';
-import spotify from '../spotify.jpg';
 
 export default function Document() {
   return (
     <Html lang="en" prefix="og: http://ogp.me/ns#">
       <Head>
-        <meta name="image" property="og:image" content={spotify}/>
         <meta property="og:title" content="Spotify Lookin' Fly"/>
         <meta name="author" content="Mike Stagg" />
         <meta property="og:description" content="This is a Spotify Clone"/>

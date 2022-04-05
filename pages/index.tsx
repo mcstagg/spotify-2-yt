@@ -3,6 +3,7 @@ import Head from 'next/head';
 import Center from "../components/Center";
 import Player from "../components/Player";
 import Sidebar from "../components/Sidebar";
+import spotify from './/spotify.jpg';
 
 export default function Home() {
   const { data: session, status } = useSession();
@@ -15,6 +16,7 @@ export default function Home() {
       <Head>
         <title>Spotify 2.0</title>
         <link rel="icon" href="/favicon.ico" />
+        <meta name="image" property="og:image" content=".//spotify.jpg"/>
       </Head>
 
       <main className="overflow-hidden scrollbar-hide flex">
